@@ -4,7 +4,9 @@ namespace ASPNETMVC.Models{
     public abstract class ObjetoEscuelaBase
     {
         public string Id { get; set; }
-        public string Nombre { get; set; }
+
+        //La palabra virtual significa que pueden ser reescritas por el componente hijo
+        public virtual string Nombre { get; set; }
 
         public ObjetoEscuelaBase()
         {

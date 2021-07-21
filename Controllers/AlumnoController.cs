@@ -14,9 +14,20 @@ namespace ASPNETMVC.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
-            return View(_context.Alumnos.FirstOrDefault());
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var alumno = from alumn in _context.Alumnos
+                                 where alumn.Id == id
+                                 select alumn;
+
+                return View(alumno.SingleOrDefault());
+            }
+            else
+            {
+                return View("MultiAlumno", _context.Alumnos);
+            }
         }
         public IActionResult MultiAlumno()
         {
