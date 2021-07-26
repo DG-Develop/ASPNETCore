@@ -28,8 +28,15 @@ namespace ASPNETMVC
             services.AddControllersWithViews();
 
             // Creando el servicio de database en memoria
-            services.AddDbContext<EscuelaContext>(
+            /* services.AddDbContext<EscuelaContext>(
                 options => options.UseInMemoryDatabase(databaseName: "testDB")
+            ); */
+
+            string connString = ConfigurationExtensions
+            .GetConnectionString(this.Configuration, "DefaultConnectionString");
+
+            services.AddDbContext<EscuelaContext>(
+                options => options.UseSqlServer(connString)
             );
         }
 

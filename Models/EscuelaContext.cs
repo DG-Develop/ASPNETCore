@@ -91,27 +91,32 @@ namespace ASPNETMVC.Models
                         new Curso{
                             EscuelaId = escuela.Id,
                             Nombre = "101",
-                            Jornada = TiposJornada.Maniana
+                            Jornada = TiposJornada.Maniana,
+                            Direccion = "Los Laureles"
                             },
                         new Curso{
                             EscuelaId = escuela.Id,
                             Nombre = "201",
-                            Jornada = TiposJornada.Maniana
+                            Jornada = TiposJornada.Maniana,
+                            Direccion = "Los Laureles"
                             },
                         new Curso{
                             EscuelaId = escuela.Id,
                             Nombre = "301",
-                            Jornada = TiposJornada.Maniana
+                            Jornada = TiposJornada.Maniana,
+                            Direccion = "Los Laureles"
                             },
                         new Curso{
                             EscuelaId = escuela.Id,
                             Nombre = "401",
-                            Jornada = TiposJornada.Tarde
+                            Jornada = TiposJornada.Tarde,
+                            Direccion = "Los Laureles"
                             },
                         new Curso{
                             EscuelaId = escuela.Id,
                             Nombre = "501",
-                            Jornada = TiposJornada.Tarde
+                            Jornada = TiposJornada.Tarde,
+                            Direccion = "Los Laureles"
                             }
             };
         }
